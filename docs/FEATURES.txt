@@ -1,0 +1,97 @@
+FEATURES
+========
+
+CORE FEATURES (MVP)
+------------------
+
+1. 3D Ocean Viewport
+   - Orbit camera with damping
+   - Pan and zoom
+   - Camera presets: Perspective, Top, Side, India Focus
+   - Indian Ocean domain (55°E-100°E, 5°S-25°N)
+   - Bathymetry base with seabed rendering
+   - Lat/lon grid overlay
+   - India + Sri Lanka coastline
+   - Reference point labels
+
+2. Ocean Field Visualization
+   - 2D field rendered as WebGL point cloud
+   - Temperature, Salinity, Current Speed, Chlorophyll
+   - Depth slicing at 9 standard levels
+   - Vertical exaggeration (1× to 10×)
+   - Animated depth plane indicator
+
+3. Scientific Color Scales
+   - 7 scientific colormaps: Thermal, Viridis, Plasma, Inferno, Haline, Balance, Algae
+   - Linear and log scaling
+   - Custom min/max
+   - Opacity control
+   - Reverse option
+
+4. Current Visualization
+   - Vector arrows at grid points
+   - Direction + magnitude coloring
+   - Depth-specific
+   - Particle flow animation (600 particles)
+
+5. Argo Float Overlay
+   - 80 floats in Indian Ocean
+   - Color-coded status (active/inactive)
+   - Click to view profile
+   - Temperature vs depth chart
+   - Salinity vs depth chart
+
+6. Glider Track Overlay
+   - 3 glider tracks
+   - Yo-yo depth profiles
+   - Temperature, salinity, chlorophyll
+
+7. Time Controller
+   - Play/pause animation
+   - 7-day rolling window
+   - Speed control: 0.5×, 1×, 2×, 4×
+   - Scrub timeline
+
+8. Model vs Observation Comparison
+   - Overlay chart: model vs Argo
+   - Statistics: mean bias, RMSE, MAE, min/max diff, correlation
+   - Configurable depth range
+
+9. Outreach Mode
+   - 6 guided experiences
+   - 4 knowledge cards
+   - Large controls
+   - Non-expert accessible
+
+10. Dashboard
+    - System health
+    - Dataset overview
+    - Observation summary
+    - Active floats display
+
+11. Dataset Explorer
+    - All registered datasets
+    - Full metadata display
+    - Spatial/temporal coverage
+
+12. Search
+    - Global search across datasets
+    - Variable search
+
+EXTENDED FEATURES (Phase 2)
+---------------------------
+
+- Real NetCDF ingestion from INCOIS/Copernicus
+- Argo live data from GDAC
+- CTD profile viewer
+- Vertical slice visualization
+- Isosurface rendering
+- 3D volume rendering
+- Zarr chunked data access
+- Multi-dataset overlay
+- Saved views / bookmarks
+- Export to CSV/GeoJSON
+- Screenshot export
+- Real-time notification system
+- User authentication
+- Role-based access control

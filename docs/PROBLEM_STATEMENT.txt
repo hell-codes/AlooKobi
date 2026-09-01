@@ -1,0 +1,51 @@
+PROBLEM STATEMENT — SIH 2026
+=============================
+
+Organization: INCOIS (Indian National Centre for Ocean Information Services)
+Department: Ministry of Earth Sciences (MoES)
+Theme: Disaster Management
+
+PROBLEM DESCRIPTION
+-------------------
+
+Ocean model outputs and in-situ observations are currently fragmented across multiple systems,
+tools, and formats. Scientists and decision-makers must:
+
+1. Use separate tools to view model fields vs observations
+2. Manually correlate Argo/glider data with model output
+3. Export data to specialized GIS software for 3D visualization
+4. Handle incompatible data formats (NetCDF, CSV, ASCII)
+5. Understand complex oceanographic software not designed for operational use
+
+This fragmentation leads to:
+
+- Slower operational decision-making during ocean events
+- Difficulty comparing model performance against real observations
+- Barriers to public understanding of ocean science
+- Limited ability to validate ocean models in real-time
+- Inability to co-visualize model and observation data in 3D space
+
+TARGET USERS
+------------
+
+1. INCOIS Scientists — daily operational analysis, model validation
+2. MoES Decision-makers — disaster management, resource allocation
+3. Navy / Coast Guard — search and rescue, navigation
+4. Fishermen / Fishery Managers — fish stock assessment, El Niño/La Niña monitoring
+5. Researchers — climate change studies, oceanography research
+6. Students / Educators — ocean science education
+7. General Public — ocean literacy
+
+SOLUTION REQUIREMENTS
+----------------------
+
+A unified browser-based 3D visualization platform that:
+
+1. Renders ocean model outputs in real-time 3D
+2. Overlays Argo float and glider observations
+3. Supports slicing across space, depth, and time
+4. Provides model vs observation comparison tools
+5. Runs entirely in a web browser (no plugin/install required)
+6. Scales to production data volumes
+7. Is accessible to non-expert users (outreach mode)
+8. Is extensible to future data sources

@@ -1,0 +1,58 @@
+SOLUTION
+========
+
+INCOIS Ocean Explorer is a full-stack web application that provides a unified 3D
+visualization of the Indian Ocean, combining model and observation data in a single
+browser-native interface.
+
+APPROACH
+--------
+
+1. FRONTEND (earth-globe): React + Three.js globe engine
+   - Single full-screen 3D globe built with React Three Fiber
+   - Geo-anchored day/night lighting, atmosphere, clouds, stars
+   - Real current fields (GODAS particles) and real surface waves (WW3)
+   - Natural Earth coastlines toggled as a first-class layer
+   - URL-parameter state for deep-linking demo panels
+
+2. BACKEND: FastAPI + Python
+   - RESTful API with strongly-typed Pydantic schemas
+   - Async data processing pipeline
+   - Data adapter abstraction for multiple source types
+   - Real-data pipelines: NCEP GODAS (NetCDF) and NOAA WW3 waves (JSON snapshot)
+   - Clearly-labelled synthetic climatology fallback for demo dataset IDs
+
+3. DATA: Adapter + Snapshot Architecture
+   - DataAdapter abstract base class
+   - NetCDFAdapter (real GODAS reanalysis cached under data/model_db/godas)
+   - SyntheticAdapter (labelled demo climatology)
+   - WW3 wave snapshot JSON (real data, baked provenance) served at /api/wave
+   - Easy addition of ArgoAdapter, GliderAdapter, etc.
+
+4. DEPLOYMENT: Docker + Docker Compose (backend) + static frontend bundle
+   - Docker/Compose runs only the backend API
+   - Earth-globe frontend is a plain Vite static build served by any static host
+   - Vite dev server for local development (API base url via VITE_GODAS_API)
+
+HOW IT SOLVES THE PROBLEM
+--------------------------
+
+| Problem | Solution |
+|---------|----------|
+| Fragmented tools | Single unified interface |
+| Manual correlation | API-powered overlay |
+| Complex GIS software | Browser-native WebGL 3D |
+| Format incompatibilities | Adapter abstraction |
+| Slow decision-making | Real-time field visualization |
+| Barrier to public | Outreach mode with explanations |
+| Limited 3D | Full 3D ocean with depth slicing |
+| Hard to compare | Statistical comparison engine |
+
+VALUE PROPOSITION
+-----------------
+
+- Scientists: One interface to rule all data
+- Decision-makers: Faster situational awareness
+- Researchers: Easy model validation
+- Public: Accessible ocean education
+- INCOIS: Showcases operational capabilities

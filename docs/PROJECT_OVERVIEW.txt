@@ -1,0 +1,112 @@
+PROJECT OVERVIEW
+================
+
+Project Name: INCOIS Ocean Explorer
+Subtitle: 3D Ocean Intelligence & Visualization Platform
+Organization: Indian National Centre for Ocean Information Services (INCOIS)
+Ministry: Ministry of Earth Sciences (MoES), Government of India
+Program: Smart India Hackathon (SIH) 2026
+Theme: Disaster Management
+Domain: Web-based interactive 3D visualization of ocean model outputs and in-situ observations
+
+CONCEPT
+-------
+
+INCOIS Ocean Explorer is a browser-native 3D scientific visualization platform
+that integrates numerical ocean model outputs with in-situ observations (Argo
+floats, gliders) into a single interactive environment.
+
+The platform enables users to:
+- Visualize the Indian Ocean in real-time 3D
+- Slice through depth (surface to 2000 m)
+- Animate through time
+- Inspect model fields (temperature, salinity, currents, chlorophyll)
+- Co-visualize observations overlaid on model fields
+- Compare model output against observations with statistical analysis
+- Switch to public outreach mode for educational use
+
+KEY FEATURES
+------------
+
+1. REAL-TIME 3D OCEAN VIEWPORT
+   - WebGL-based 3D rendering via Three.js
+   - Orbit, pan, zoom camera with damping
+   - Preset views: top, side, perspective, India focus
+   - Bathymetry base with stylized seabed
+   - Lat/lon grid overlay
+   - Coastline (India, Sri Lanka)
+   - Reference point labels (Mumbai, Chennai, Port Blair, etc.)
+
+2. SCIENTIFIC VISUALIZATION
+   - Multiple variables: temperature, salinity, currents, chlorophyll
+   - Multiple depth levels: 0, 10, 25, 50, 100, 200, 500, 1000, 2000 m
+   - Multiple color scales: thermal, viridis, plasma, inferno, haline, balance, algae
+   - Linear and log scaling
+   - Reverse and custom min/max
+   - Opacity control
+
+3. OBSERVATION OVERLAY
+   - Argo float positions and depth profiles
+   - Glider tracks with timestamps
+   - Color-coded status (active/inactive)
+
+4. CURRENT VISUALIZATION
+   - Vector arrows (density, scale, opacity configurable)
+   - Animated particle flow (600 particles advected by current field)
+
+5. TIME CONTROL
+   - Play, pause, scrub
+   - Speed control: 0.5×, 1×, 2×, 4×
+   - 7-day rolling window
+
+6. MODEL VS OBSERVATION ANALYSIS
+   - Overlay plot (model line vs observation line)
+   - Statistics: mean bias, RMSE, MAE, min/max diff, correlation
+   - Configurable depth range
+
+7. OUTREACH MODE
+   - Student-friendly guided experiences
+   - Knowledge cards explaining key concepts
+   - Visual storytelling
+
+8. DASHBOARD
+   - Operational overview
+   - System health
+   - Dataset summary
+   - Sample observations
+
+9. DATASET EXPLORER
+   - List of all registered datasets
+   - Metadata: type, format, source, license, spatial/temporal coverage
+
+10. ADMIN
+    - System health
+    - API metadata
+    - Dataset management
+
+INNOVATION
+----------
+
+- Browser-native 3D ocean visualization (no plugin required)
+- Model and observation co-visualization
+- Scalable scientific data adapter architecture
+- Modular sensor adapters (Argo, Glider, CTD, BGC, etc.)
+- Interactive comparison with statistical validation
+- Public outreach mode for science communication
+
+IMPACT
+------
+
+- Faster operational analysis for INCOIS scientists
+- Better model validation through observation comparison
+- Disaster management support (cyclones, tsunamis, oil spills)
+- Search-and-rescue support via current field analysis
+- Fisheries support via chlorophyll and SST fields
+- Climate monitoring
+- Scientific education
+- Public awareness
+
+DESIGN PHILOSOPHY
+-----------------
+
+ONE OCEAN. ONE INTERFACE. ALL DIMENSIONS. ALL OBSERVATIONS.

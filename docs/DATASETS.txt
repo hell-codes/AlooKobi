@@ -1,0 +1,36 @@
+DATASETS
+========
+
+ACTIVE IN PLATFORM
+------------------
+
+| Dataset | Source | URL | Format | Variables | Spatial | Temporal | Depth | Purpose | License |
+|---------|--------|-----|--------|-----------|---------|----------|-------|---------|---------|
+| ocean_model_demo | Synthetic generator | (in-app) | NumPy | temperature, salinity, uo, vo, speed, chl | 55-100°E, 5°S-25°N | 7 days | 0-2000 m | Demo | Demo only |
+| argo_global | Synthetic generator | (in-app) | JSON | temperature, salinity, chlorophyll | 55-100°E, 5°S-25°N | rolling | 0-2000 m | Demo | Demo only |
+| glider_demo | Synthetic generator | (in-app) | JSON | temperature, salinity, chlorophyll | Arabian Sea, Bay of Bengal | 48 h | 0-200 m | Demo | Demo only |
+
+PRODUCTION-READY SOURCES (TO BE INTEGRATED)
+-------------------------------------------
+
+| Dataset | Source | URL | Format | Variables | Spatial | Temporal | Depth | Purpose | License |
+|---------|--------|-----|--------|-----------|---------|----------|-------|---------|---------|
+| Global Ocean Physics Analysis & Forecast | Copernicus CMEMS | https://marine.copernicus.eu | NetCDF4 | T, S, u, v, ssh, mlp | Global, 1/12° | 2018-present, daily | 0-5500 m | Operational forecast | Free, attribution |
+| Global Ocean Biogeochemistry | Copernicus CMEMS | https://marine.copernicus.eu | NetCDF4 | chl, O2, NO3, pH | Global, 1/4° | 2018-present, daily | 0-5500 m | BGC analysis | Free, attribution |
+| Indian Ocean Physics Forecast | Copernicus CMEMS | https://marine.copernicus.eu | NetCDF4 | T, S, u, v, ssh | Indian Ocean, 1/12° | daily | 0-5500 m | Regional forecast | Free, attribution |
+| Argo Profile Data | Argo GDAC | https://argo.ucsd.edu | NetCDF per profile | T, S, P | Global | 2000-present | 0-2000 m | Float observations | Free, attribution |
+| Argo BGC Data | Argo BGC | https://biogeochemical-argo.org | NetCDF per profile | T, S, chl, O2, NO3, pH | Global | 2010s-present | 0-2000 m | BGC float data | Free, attribution |
+| World Ocean Atlas 2023 | NOAA NCEI | https://www.ncei.noaa.gov/products/world-ocean-atlas | NetCDF, ASCII | T, S, O2, NO3, Si, P | Global, 1/4° and 1° | Climatology | 0-5500 m | Climatology | Public domain |
+| ERA5 Reanalysis | ECMWF / Copernicus CDS | https://cds.climate.copernicus.eu | NetCDF/GRIB | T, u, v, p, etc. | Global, 0.25° | 1940-present | Atmospheric | Surface forcing | Free, attribution |
+| AVISO Sea Level | CMEMS | https://marine.copernicus.eu | NetCDF | SSH, geostrophic currents | Global, 0.25° | 1993-present | Surface | Altimetry | Free, attribution |
+| TropFlux | Various | https://www.incois.gov.in | NetCDF | Heat, momentum, freshwater fluxes | Indian Ocean | 1979-present | Surface | Fluxes | Free, attribution |
+| RAMA Mooring | NOAA PMEL | https://www.pmel.noaa.gov/gtmba | ASCII, NetCDF | T, S, u, v, met | Indian Ocean | 2000-present | Mixed layer | Moored buoys | Free, attribution |
+
+DATA ACQUISITION NOTES
+----------------------
+
+- For automatic download at runtime, use a server-side data fetcher with
+  proper caching (Zarr/Dask) so the browser only receives subsetted slices.
+- For real-time data, set up an OPeNDAP server or use COPERNICUS MARINE Toolbox.
+- For INCOIS-specific operational data, coordinate with INCOIS data management
+  group for access credentials.

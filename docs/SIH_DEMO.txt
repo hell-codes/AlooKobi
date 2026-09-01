@@ -1,0 +1,93 @@
+SIH 2026 DEMO SCRIPT
+====================
+
+DURATION: 7-10 minutes
+HARDWARE: Laptop with Chrome/Firefox, 1920x1080 display, mouse
+BACKEND:  Run first — `uvicorn app.main:app --port 8000` (from backend/)
+FRONTEND: Run `npm run dev` (earth-globe) → http://localhost:5173
+
+00:00 — ENTRY (30 sec)
+-----------------------
+- Open browser to http://localhost:5173
+- Point out: a single full-screen 3D globe (no multi-page app)
+- Intro: "Real ocean model data, interactive, in the browser"
+
+00:30 — GLOBE OVERVIEW (1 min)
+------------------------------
+- Point out the layout:
+  - Navigation bar (top-left): Locate / Pan tools, zoom in/out, reset view
+  - Dashboard (bottom): Animate, Overlay, Coastlines, Depth controls
+  - Time panel (top-right): LIVE / MANUAL clock
+  - Cursor readout: live latitude / longitude in the corner
+- Mention: geo-anchored day/night — the sun follows real geography
+
+01:30 — ROTATE & ZOOM (30 sec)
+------------------------------
+- Drag to orbit the globe, scroll to zoom
+- Show the terminator crossing continents with the geo-anchored sun
+- Note India's position and the Natural Earth coastline
+
+02:00 — DAY / NIGHT (30 sec)
+----------------------------
+- Keep LIVE time on; watch the lit hemisphere track real local time
+- Mention the sun position is computed from actual UTC, not a texture
+
+02:30 — MANUAL TIME SLIDER (45 sec)
+-----------------------------------
+- Switch Time to MANUAL → UTC clock slider appears
+- Slide to early morning / late evening UTC
+- Show the sun sweeping across the globe (subsolar point moves geographically)
+- Slide to ~07:30 UTC → India is in bright local daylight (afternoon)
+- Reset to LIVE
+
+03:15 — CURRENTS (1 min)
+------------------------
+- Dashboard → Animate → Currents
+- Show real GODAS current field as dense particle flow (Indian Ocean)
+- Watch monsoon-driven circulation direction
+- Switch Animate → Waves
+
+04:15 — WAVES (1 min)
+---------------------
+- Animate → Waves
+- Show real NOAA WW3 surface waves: particle streaks with height →
+  brighter/longer lines for higher seas
+- Overlay → Waves: heat-tint of significant wave height
+- Overlay → Currents: speed field overlay
+- Note the provenance payload: real public NOAA/NCEP data
+
+05:15 — COASTLINES (30 sec)
+---------------------------
+- Toggle Coastlines ON and OFF — Natural Earth 50m detail visible worldwide
+
+05:45 — DEPTH (30 sec)
+----------------------
+- Use the Depth slider; show the plane indicator moving deeper
+- Show the field color response with depth
+
+06:15 — LOCATE / PAN (30 sec)
+-----------------------------
+- Locate tool: click any ocean point → coordinate readout with cardinal
+  direction (e.g. "19.8 N, 72.2 E · N")
+- Reset view
+
+06:45 — WRAP UP (1 min)
+-----------------------
+- Show URL deep links: `?anim=waves&overlay=waves`, `?time=manual&t=450`
+- Summarize differentiators:
+  1. Real data end-to-end: GODAS currents + WW3 waves + Natural Earth coastlines
+  2. Geo-anchored day/night from a live UTC clock
+  3. Dense GPU particle rendering, browser-native (no plugin)
+  4. Provenance embedded in every data response
+- Point to the data notice: public NOAA/NCEP model data; the four synthetic
+  demo dataset IDs are clearly labelled and offline-fall back.
+- Thank the judges
+
+DEMO TIPS
+---------
+- Use Chrome (best WebGL support)
+- Close other browser tabs (more GPU memory)
+- Pre-warm: open each tab/route once before the demo so textures/caches load
+- Press `?ar=1` only if you want the globe to auto-rotate slowly
+- Fallback if backend is down: core globe + synthetic demo datasets still work;
+  currents/waves will show a graceful "data unavailable" state

@@ -1,0 +1,70 @@
+ACRONYMS
+========
+
+| Acronym | Full Form | Relevance |
+|---------|-----------|-----------|
+| INCOIS | Indian National Centre for Ocean Information Services | Project owner |
+| MoES | Ministry of Earth Sciences | Parent ministry |
+| EEZ | Exclusive Economic Zone | Maritime boundary |
+| NetCDF | Network Common Data Form | Scientific data format |
+| CF | Climate and Forecast | NetCDF metadata convention |
+| OGC | Open Geospatial Consortium | GIS standards |
+| WMS | Web Map Service | OGC standard |
+| WCS | Web Coverage Service | OGC standard |
+| OPeNDAP | Open-source Project for a Network Data Access Protocol | Data access protocol |
+| API | Application Programming Interface | System integration |
+| REST | Representational State Transfer | API architecture |
+| WebGL | Web Graphics Library | Browser 3D rendering |
+| GPU | Graphics Processing Unit | Rendering hardware |
+| Argo | Array for Real-time Geostrophic Oceanography | Float network |
+| BGC | Biogeochemical | Float type with BGC sensors |
+| CTD | Conductivity, Temperature, Depth | Oceanographic instrument |
+| ADCP | Acoustic Doppler Current Profiler | Current measurement |
+| HF Radar | High Frequency Radar | Surface current measurement |
+| Dask | Parallel computing library | Big data processing |
+| Zarr | Chunked, compressed N-dimensional arrays | Data format |
+| GIS | Geographic Information System | Spatial analysis |
+| SIH | Smart India Hackathon | Competition |
+| UI | User Interface | Frontend |
+| UX | User Experience | Frontend |
+| WOA | World Ocean Atlas | NOAA climatology |
+| SST | Sea Surface Temperature | Common ocean variable |
+| SSS | Sea Surface Salinity | Common ocean variable |
+| PSU | Practical Salinity Unit | Salinity unit |
+| T/S | Temperature/Salinity | Common pair |
+| DCM | Deep Chlorophyll Maximum | Subsurface feature |
+| AS | Arabian Sea | Region |
+| BoB | Bay of Bengal | Region |
+| EIO | Equatorial Indian Ocean | Region |
+| ITCZ | Intertropical Convergence Zone | Meteorological feature |
+| MC | Monsoon Current | Indian Ocean current |
+| WGMD | World Glacier Monitoring Service | Glacier data |
+| GDAC | Global Data Assembly Centre | Argo data hub |
+| WMO | World Meteorological Organization | Weather standards |
+| IOC | Intergovernmental Oceanographic Commission | UNESCO body |
+| GOOS | Global Ocean Observing System | Observing network |
+| SBE | Sea-Bird Electronics | CTD manufacturer |
+| GDEM | Generalized Digital Environmental Model | Navy climatology |
+| CMEMS | Copernicus Marine Environment Monitoring Service | EU ocean data |
+| NCEP | National Centers for Environmental Prediction | US weather |
+| ECMWF | European Centre for Medium-Range Weather Forecasts | EU weather |
+| IT | Information Technology | Generic |
+| RL | Reinforcement Learning | AI/ML |
+| ML | Machine Learning | AI/ML |
+| AI | Artificial Intelligence | AI/ML |
+| HTTP | HyperText Transfer Protocol | Web |
+| HTTPS | HTTP Secure | Web |
+| JSON | JavaScript Object Notation | Data format |
+| XML | eXtensible Markup Language | Data format |
+| CSS | Cascading Style Sheets | Web styling |
+| HTML | HyperText Markup Language | Web markup |
+| DOM | Document Object Model | Web API |
+| SDK | Software Development Kit | Development |
+| CDN | Content Delivery Network | Web infrastructure |
+| DNS | Domain Name System | Internet |
+| TCP | Transmission Control Protocol | Network |
+| UDP | User Datagram Protocol | Network |
+| WCAG | Web Content Accessibility Guidelines | Accessibility |
+| 3D | Three-Dimensional | Graphics |
+| 2D | Two-Dimensional | Graphics |
+| HCI | Human-Computer Interaction | UX research |
